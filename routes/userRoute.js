@@ -6,7 +6,7 @@ const taskRoute = require('./taskRoute')
 const router = express.Router();
 
 
-router.route('/').post(loginUser)
+router.route('/login').post(loginUser)
 router.route('/register').post(registerUser)
 router.use('/api/tasks', authMiddleware, taskRoute);
 
